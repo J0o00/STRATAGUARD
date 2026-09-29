@@ -513,10 +513,8 @@ export default function DigitalTwin3D({ state, selectedNode, onSelectNode }: Dig
         shadows
         dpr={[1, 2]}
         camera={{ fov: 40, near: 0.5, far: 300 }}
-        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.05 }}
+        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.05, alpha: true }}
       >
-        {/* Atmospheric sky gradient fog */}
-        <fog attach="fog" args={[skyColor, 38, 85]} />
         <MineScene state={state} selectedNode={selectedNode} onSelectNode={onSelectNode} />
       </Canvas>
     </div>
