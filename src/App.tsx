@@ -134,7 +134,15 @@ export default function App() {
   ];
 
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div style={{ 
+      width: '100vw', 
+      height: '100vh', 
+      position: 'relative', 
+      overflow: 'hidden', 
+      backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.65), rgba(10, 15, 25, 0.85)), url(${heroBg})`, 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center' 
+    }}>
 
       {/* ── Full-screen 3D Digital Twin background ──────────────────────── */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
