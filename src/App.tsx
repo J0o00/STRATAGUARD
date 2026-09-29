@@ -11,6 +11,8 @@ import type { SimState, SimStage } from './store/simulation';
 // Lazy-load the 3D component
 const DigitalTwin3D = lazy(() => import('./components/DigitalTwin3D'));
 
+import heroBg from './assets/hero.png';
+
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 const ts = () => new Date().toLocaleTimeString('en', { hour12: false });
 
@@ -132,12 +134,12 @@ export default function App() {
   ];
 
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', background: '#1a2332' }}>
+    <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', backgroundImage: `url(${heroBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
       {/* ── Full-screen 3D Digital Twin background ──────────────────────── */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <Suspense fallback={
-          <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', background:'#1a2332' }}>
+          <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center' }}>
             <div style={{ textAlign: 'center', color: 'rgba(255,255,255,0.7)' }}>
               <div style={{ width:40, height:40, border:'2px solid rgba(255,255,255,0.2)', borderTop:'2px solid rgba(255,255,255,0.8)', borderRadius:'50%', animation:'spin 1s linear infinite', margin:'0 auto 12px' }} />
               <div style={{ fontSize:12, fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase' }}>Loading Digital Twin</div>

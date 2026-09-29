@@ -508,7 +508,7 @@ export default function DigitalTwin3D({ state, selectedNode, onSelectNode }: Dig
   const skyColor = state.stage >= 4 ? '#1a1018' : state.stage >= 2 ? '#1e2230' : '#1a2332';
 
   return (
-    <div style={{ width: '100%', height: '100%', position: 'relative', background: skyColor, transition: 'background 1.5s ease' }}>
+    <div style={{ width: '100%', height: '100%', position: 'relative', background: 'transparent' }}>
       <Canvas
         shadows
         dpr={[1, 2]}
