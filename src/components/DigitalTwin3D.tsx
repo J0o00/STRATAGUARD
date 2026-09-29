@@ -504,8 +504,6 @@ interface DigitalTwinProps {
 }
 
 export default function DigitalTwin3D({ state, selectedNode, onSelectNode }: DigitalTwinProps) {
-  // Sky gradient based on time-of-day feel
-  const skyColor = state.stage >= 4 ? '#1a1018' : state.stage >= 2 ? '#1e2230' : '#1a2332';
 
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative', background: 'transparent' }}>
